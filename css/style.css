@@ -510,7 +510,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .intro__bg {
   position: absolute;
   inset: 0;
-  background-image: var(--intro-bg-image, none);
   background-size: cover;
   background-position: center 65%;
   opacity: 0.5;
