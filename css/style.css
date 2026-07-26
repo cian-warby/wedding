@@ -834,11 +834,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: grid;
   gap: var(--space-2xl);
 }
-@media (min-width: 980px) {
-  .details__layout { grid-template-columns: 1fr 1fr; align-items: stretch; }
-}
 
 .details__card {
+  max-width: 640px;
+  margin-inline: auto;
+  width: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -867,6 +867,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl) var(--space-lg);
+  max-width: 820px;
+  margin-inline: auto;
 }
 .countdown-panel__date {
   font-family: var(--font-heading);
