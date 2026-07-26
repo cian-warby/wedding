@@ -560,16 +560,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .save-card__illustration img { width: 100%; height: auto; display: block; }
 
-.save-card__eyebrow {
-  font-family: var(--font-heading);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  font-size: var(--fs-2xs);
-  color: var(--save-card-ink-soft);
-  text-align: center;
-}
-:root[dir="rtl"] .save-card__eyebrow { letter-spacing: 0.08em; }
-
 .save-card__names {
   font-family: var(--font-heading);
   font-weight: 600;

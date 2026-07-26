@@ -10,7 +10,6 @@ window.I18N = {
     "nav.faq": "FAQ",
     "nav.rsvp": "RSVP",
 
-    "intro.eyebrow": "Save The Date",
     "intro.name1": "Rand",
     "intro.name2": "Cian",
     "intro.tagline": "Join us as we celebrate our wedding",
@@ -143,7 +142,6 @@ window.I18N = {
     "nav.faq": "الأسئلة الشائعة",
     "nav.rsvp": "تأكيد الحضور",
 
-    "intro.eyebrow": "احفظوا التاريخ",
     "intro.name1": "رند",
     "intro.name2": "كين",
     "intro.tagline": "انضموا إلينا للاحتفال بزفافنا",
