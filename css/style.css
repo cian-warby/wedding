@@ -1016,6 +1016,16 @@ ul { margin: 0; padding: 0; list-style: none; }
    ========================================================================== */
 
 .faq-list { max-width: 760px; margin-inline: auto; }
+.faq-category {
+  font-family: var(--font-heading);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  color: var(--color-sage);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-2xs);
+}
+.faq-category:first-child { margin-top: 0; }
 .faq-item {
   border-bottom: 1px solid var(--color-border);
 }
