@@ -61,10 +61,54 @@
       <h1 class="section-title" style="margin-top:var(--space-lg);" data-i18n="rsvp.title">We Can't Wait To Celebrate With You</h1>
       <p class="section-lead" style="margin-inline:auto;" data-i18n="rsvp.copy">Kindly let us know if you'll be able to join us by 1 June 2027.</p>
 
-      <div style="margin-top:var(--space-xl);">
-        <!-- Placeholder link — replace with your real RSVP form/tool URL once set up -->
-        <a class="btn btn--terracotta" href="#" id="rsvpLink" data-i18n="rsvp.cta">RSVP Now</a>
-      </div>
+      <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/meeyvaek" method="POST">
+        <input type="hidden" name="_subject" value="New RSVP — Rand &amp; Cian Wedding">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="rsvp-form__row">
+          <label for="rsvpName" data-i18n="rsvp.form.name">Full Name</label>
+          <input type="text" id="rsvpName" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="rsvp-form__row">
+          <label for="rsvpEmail" data-i18n="rsvp.form.email">Email Address</label>
+          <input type="email" id="rsvpEmail" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="rsvp-form__row">
+          <span class="rsvp-form__legend" data-i18n="rsvp.form.attendingLabel">Will you be attending?</span>
+          <div class="rsvp-form__options">
+            <label class="rsvp-form__radio">
+              <input type="radio" name="attending" value="Joyfully accepts" required>
+              <span data-i18n="rsvp.form.attendingYes">Joyfully Accept</span>
+            </label>
+            <label class="rsvp-form__radio">
+              <input type="radio" name="attending" value="Regretfully declines" required>
+              <span data-i18n="rsvp.form.attendingNo">Regretfully Decline</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="rsvp-form__row rsvp-form__conditional" id="rsvpGuestsRow">
+          <label for="rsvpGuests" data-i18n="rsvp.form.guests">Number of Guests Attending</label>
+          <input type="number" id="rsvpGuests" name="guests" min="1" max="10" value="1">
+        </div>
+
+        <div class="rsvp-form__row rsvp-form__conditional" id="rsvpDietaryRow">
+          <label for="rsvpDietary" data-i18n="rsvp.form.dietary">Dietary Restrictions or Allergies</label>
+          <textarea id="rsvpDietary" name="dietary" rows="2"></textarea>
+        </div>
+
+        <div class="rsvp-form__row">
+          <label for="rsvpMessage" data-i18n="rsvp.form.message">Message for the Couple (optional)</label>
+          <textarea id="rsvpMessage" name="message" rows="3"></textarea>
+        </div>
+
+        <div class="rsvp-form__submit-row">
+          <button type="submit" class="btn btn--terracotta" id="rsvpSubmit" data-i18n="rsvp.form.submit">Send RSVP</button>
+          <p class="rsvp-form__status" id="rsvpStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
       <p class="rsvp__note" style="margin-top:var(--space-md); color:var(--color-ink-faint);" data-i18n="rsvp.note">RSVP by 1 June 2027</p>
 
       <p style="margin-top:var(--space-2xl); font-size:var(--fs-sm); color:var(--color-ink-soft);" data-i18n="rsvp.helpNote">Have a question, or need to update your response? Email us at <a href="mailto:hello@randandcian.com">hello@randandcian.com</a>.</p>

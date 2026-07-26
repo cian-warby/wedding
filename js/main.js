@@ -148,4 +148,61 @@
     updateJourneyCard(e.detail);
   });
 
+  /* ---------------- RSVP form ---------------- */
+  var rsvpForm = document.getElementById("rsvpForm");
+  if (rsvpForm) {
+    var guestsRow = document.getElementById("rsvpGuestsRow");
+    var dietaryRow = document.getElementById("rsvpDietaryRow");
+    var statusEl = document.getElementById("rsvpStatus");
+    var submitBtn = document.getElementById("rsvpSubmit");
+
+    function toggleConditionalRows() {
+      var declined = rsvpForm.querySelector('input[name="attending"][value="Regretfully declines"]');
+      var isDeclining = declined && declined.checked;
+      [guestsRow, dietaryRow].forEach(function (row) {
+        if (!row) return;
+        row.hidden = isDeclining;
+        row.querySelectorAll("input, textarea").forEach(function (field) {
+          field.disabled = isDeclining;
+        });
+      });
+    }
+    rsvpForm.querySelectorAll('input[name="attending"]').forEach(function (radio) {
+      radio.addEventListener("change", toggleConditionalRows);
+    });
+    toggleConditionalRows();
+
+    rsvpForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var lang = document.documentElement.lang || "en";
+      var dict = (window.I18N && window.I18N[lang]) || {};
+      submitBtn.disabled = true;
+      statusEl.setAttribute("data-state", "pending");
+      statusEl.textContent = dict["rsvp.form.submitting"] || "Sending…";
+
+      fetch(rsvpForm.action, {
+        method: "POST",
+        body: new FormData(rsvpForm),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            statusEl.setAttribute("data-state", "success");
+            statusEl.textContent = dict["rsvp.form.success"] || "Thank you! Your RSVP has been received.";
+            rsvpForm.reset();
+            toggleConditionalRows();
+          } else {
+            throw new Error("Form submission failed");
+          }
+        })
+        .catch(function () {
+          statusEl.setAttribute("data-state", "error");
+          statusEl.textContent = dict["rsvp.form.error"] || "Something went wrong. Please try again or email us directly.";
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+        });
+    });
+  }
+
 })();

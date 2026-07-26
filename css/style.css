@@ -1162,6 +1162,98 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 .info-banner svg { flex-shrink: 0; width: 24px; height: 24px; color: var(--color-sage); margin-top: 2px; }
 
 /* ==========================================================================
+   RSVP form
+   ========================================================================== */
+
+.rsvp-form {
+  margin-top: var(--space-xl);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+:root[dir="rtl"] .rsvp-form { text-align: right; }
+
+.rsvp-form__row label,
+.rsvp-form__legend {
+  display: block;
+  font-family: var(--font-heading);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  color: var(--color-sage);
+  margin-bottom: var(--space-2xs);
+}
+
+.rsvp-form__row input[type="text"],
+.rsvp-form__row input[type="email"],
+.rsvp-form__row input[type="number"],
+.rsvp-form__row textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  color: var(--color-ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2xs) 0;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.rsvp-form__row textarea { resize: vertical; min-height: 3em; }
+.rsvp-form__row input:focus-visible,
+.rsvp-form__row textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-terracotta);
+}
+
+.rsvp-form__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.rsvp-form__radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2xs) var(--space-md);
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.rsvp-form__radio input { position: absolute; opacity: 0; pointer-events: none; }
+.rsvp-form__radio:has(input:checked) {
+  background: var(--color-sage);
+  border-color: var(--color-sage);
+  color: var(--color-bg);
+}
+.rsvp-form__radio:has(input:focus-visible) { outline: 3px solid var(--color-terracotta); outline-offset: 2px; }
+
+.rsvp-form__conditional {
+  overflow: hidden;
+  max-height: 200px;
+  opacity: 1;
+  transition: max-height var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out), margin var(--dur-base) var(--ease-out);
+}
+.rsvp-form__conditional[hidden] {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.rsvp-form__submit-row { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; }
+.rsvp-form__submit-row .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.rsvp-form__status { font-size: var(--fs-sm); }
+.rsvp-form__status[data-state="success"] { color: var(--color-sage-deep); }
+:root[data-theme="dark"] .rsvp-form__status[data-state="success"] { color: var(--color-sage); }
+.rsvp-form__status[data-state="error"] { color: var(--color-terracotta-deep); }
+
+/* ==========================================================================
    Back to top / misc
    ========================================================================== */
 
