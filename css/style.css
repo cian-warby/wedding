@@ -920,10 +920,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .schedule--blush { background: var(--color-blush); }
 
 .schedule-plan-image {
+  display: block;
   max-width: 480px;
   width: 100%;
   height: auto;
-  display: inline-block;
+  margin-inline: auto;
 }
 
 /* Condensed home-page schedule teaser */
