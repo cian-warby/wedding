@@ -34,7 +34,7 @@
     <nav class="nav__links" aria-label="Primary">
       <a href="our-story.html" data-i18n="nav.story">Our Story</a>
       <a href="#details" data-i18n="nav.wedding">The Wedding</a>
-      <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+      <a href="schedule.html" data-i18n="nav.schedule">Schedule</a>
       <a href="things-to-do.html" data-i18n="nav.things">Things To Do</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
@@ -54,7 +54,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="our-story.html" data-i18n="nav.story">Our Story</a>
   <a href="#details" data-i18n="nav.wedding">The Wedding</a>
-  <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+  <a href="schedule.html" data-i18n="nav.schedule">Schedule</a>
   <a href="things-to-do.html" data-i18n="nav.things">Things To Do</a>
   <a href="#faq" data-i18n="nav.faq">FAQ</a>
   <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
@@ -153,49 +153,37 @@
     </div>
   </section>
 
-  <!-- ============================= SCHEDULE ============================= -->
-  <section class="schedule section schedule--blush" id="schedule">
+  <!-- ============================= SCHEDULE TEASER ============================= -->
+  <section class="schedule-teaser section schedule--blush" id="schedule">
     <div class="container">
-      <div class="schedule-crest">
-        <p class="schedule-monogram">R <span class="heart">&hearts;</span> C</p>
-        <p class="script schedule-names" data-i18n="brand.names">Rand &amp; Cian</p>
-        <p class="schedule-crest-date">17 . 07 . 2027</p>
+      <h2 class="schedule-teaser__title" data-i18n="schedule.teaserTitle">The Schedule</h2>
+      <div class="schedule-teaser__divider" aria-hidden="true">
+        <svg viewBox="0 0 64 16" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 8h20M42 8h20" stroke-linecap="round"/><path d="M32 3v10M27 8h10" stroke-linecap="round"/></svg>
       </div>
-
-      <div class="schedule-path">
-        <svg class="schedule-path__wave" viewBox="0 0 100 600" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M26,50 C26,90 74,90 74,150 C74,210 26,210 26,250 C26,290 74,290 74,350 C74,410 26,410 26,450 C26,490 74,490 74,550" />
-        </svg>
-
-        <div class="schedule-node schedule-node--a">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-venue.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">4:00 PM</p><p class="schedule-node__label" data-i18n="schedule.arrive">Guests Arrive</p></div>
+      <div class="schedule-teaser__row">
+        <div class="schedule-teaser__item">
+          <div class="schedule-teaser__icon"><img src="assets/images/schedule-icon-rings.png" alt=""></div>
+          <p class="schedule-teaser__label" data-i18n="schedule.ceremony">Ceremony</p>
+          <p class="schedule-teaser__time">4:30 PM</p>
         </div>
-
-        <div class="schedule-node schedule-node--b">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-rings.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">4:30 PM</p><p class="schedule-node__label" data-i18n="schedule.ceremony">Ceremony</p></div>
+        <div class="schedule-teaser__item">
+          <div class="schedule-teaser__icon"><img src="assets/images/schedule-icon-glasses.png" alt=""></div>
+          <p class="schedule-teaser__label" data-i18n="schedule.cocktailsShort">Cocktails</p>
+          <p class="schedule-teaser__time">5:00 PM</p>
         </div>
-
-        <div class="schedule-node schedule-node--a">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-glasses.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">5:00 PM</p><p class="schedule-node__label" data-i18n="schedule.cocktails">Cocktails &amp; Photos</p></div>
+        <div class="schedule-teaser__item">
+          <div class="schedule-teaser__icon"><img src="assets/images/schedule-icon-plate.png" alt=""></div>
+          <p class="schedule-teaser__label" data-i18n="schedule.dinnerShort">Dinner</p>
+          <p class="schedule-teaser__time">6:30 PM</p>
         </div>
-
-        <div class="schedule-node schedule-node--b">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-plate.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">6:30 PM</p><p class="schedule-node__label" data-i18n="schedule.dinner">Dinner &amp; Speeches</p></div>
+        <div class="schedule-teaser__item">
+          <div class="schedule-teaser__icon"><img src="assets/images/schedule-icon-dancers.png" alt=""></div>
+          <p class="schedule-teaser__label" data-i18n="schedule.dancingShort">Dancing</p>
+          <p class="schedule-teaser__time">8:00 PM</p>
         </div>
-
-        <div class="schedule-node schedule-node--a">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-dancers.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">8:00 PM</p><p class="schedule-node__label" data-i18n="schedule.dance">First Dance</p></div>
-        </div>
-
-        <div class="schedule-node schedule-node--b">
-          <div class="schedule-node__icon"><img src="assets/images/schedule-icon-cake.png" alt=""></div>
-          <div class="schedule-node__text"><p class="schedule-node__time">9:30 PM</p><p class="schedule-node__label" data-i18n="schedule.cake">Cake Cutting</p></div>
-        </div>
+      </div>
+      <div class="schedule-teaser__cta">
+        <a class="btn btn--outline" href="schedule.html" data-i18n="schedule.teaserCta">View Full Schedule</a>
       </div>
     </div>
   </section>
