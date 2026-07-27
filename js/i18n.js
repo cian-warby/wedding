@@ -12,9 +12,10 @@ window.I18N = {
 
     "intro.name1": "Rand",
     "intro.name2": "Cian",
-    "intro.tagline": "Join us as we celebrate our wedding",
+    "intro.eyebrow": "Together With Their Families",
+    "intro.tagline": "Invite You To Celebrate Their Wedding",
+    "intro.month": "July",
     "intro.venue": "Palacio de Caranceja",
-    "intro.footer": "Official Wedding Website",
     "intro.cta": "RSVP",
     "intro.scroll": "Scroll",
 
@@ -158,9 +159,10 @@ window.I18N = {
 
     "intro.name1": "رند",
     "intro.name2": "كين",
-    "intro.tagline": "انضموا إلينا للاحتفال بزفافنا",
+    "intro.eyebrow": "بمشاركة عائلتيهما",
+    "intro.tagline": "يدعوانكم للاحتفال بزفافهما",
+    "intro.month": "يوليو",
     "intro.venue": "قصر كارانسيخا",
-    "intro.footer": "الموقع الرسمي للزفاف",
     "intro.cta": "تأكيد الحضور",
     "intro.scroll": "مرر للأسفل",
 
