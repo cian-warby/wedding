@@ -7,7 +7,7 @@
 <meta name="description" content="Join Rand & Cian as they celebrate their wedding at Palacio de Caranceja, Cantabria, Spain on 17 July 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
       </svg>
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="#story" data-i18n="nav.story">Our Story</a>
+      <a href="our-story.html" data-i18n="nav.story">Our Story</a>
       <a href="#details" data-i18n="nav.wedding">The Wedding</a>
       <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
       <a href="things-to-do.html" data-i18n="nav.things">Things To Do</a>
@@ -52,7 +52,7 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#story" data-i18n="nav.story">Our Story</a>
+  <a href="our-story.html" data-i18n="nav.story">Our Story</a>
   <a href="#details" data-i18n="nav.wedding">The Wedding</a>
   <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
   <a href="things-to-do.html" data-i18n="nav.things">Things To Do</a>
@@ -109,57 +109,6 @@
           <div><p class="countdown-unit__num" id="cd-hours">00</p><p class="countdown-unit__label" data-i18n="details.cdHours">Hours</p></div>
           <div><p class="countdown-unit__num" id="cd-mins">00</p><p class="countdown-unit__label" data-i18n="details.cdMins">Mins</p></div>
           <div><p class="countdown-unit__num" id="cd-secs">00</p><p class="countdown-unit__label" data-i18n="details.cdSecs">Secs</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= OUR STORY ============================= -->
-  <section class="story section section--alt" id="story">
-    <div class="container">
-      <div class="story__layout">
-        <div class="story__media">
-          <img src="assets/images/couple-illustration.jpg" alt="Watercolour illustration of Rand and Cian, seen from behind, with their dog">
-        </div>
-        <div>
-          <p class="eyebrow" data-i18n="story.eyebrow">Our Story</p>
-          <h2 class="section-title" data-i18n="story.title">Two Roads, One Journey</h2>
-          <div class="divider"></div>
-          <div class="story__copy">
-            <p data-i18n="story.p1">Cian grew up on the banks of the Shannon in Athlone, Ireland. Rand grew up among the ancient stone streets of Jerusalem, Palestine. Two very different childhoods, on two different edges of the map.</p>
-            <p data-i18n="story.p2">Life brought us both to Dublin — and that's where our story really began. Now, we're bringing our two families and all our favourite people together in Cantabria, Spain, to celebrate the next chapter.</p>
-            <p data-i18n="story.p3">Spin the globe below to follow the journey that led us here.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= JOURNEY (GLOBE) ============================= -->
-  <section class="journey section" id="journey">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow" data-i18n="journey.eyebrow">Our Journey</p>
-        <h2 class="section-title" data-i18n="journey.title">Spin the Globe</h2>
-        <p class="section-lead" data-i18n="journey.lead">From Athlone to Jerusalem, brought together in Dublin — and now, on to Cantabria. Drag the globe or choose a stop below.</p>
-      </div>
-      <div class="journey__layout">
-        <div>
-          <div class="journey__globe-wrap" id="globeWrap" role="img" aria-label="Interactive globe showing Athlone, Jerusalem, Dublin and Cantabria">
-            <canvas id="globeCanvas"></canvas>
-            <div class="journey__hint"><span data-i18n="journey.hint">Drag to spin</span></div>
-          </div>
-          <div class="journey__pin-list" id="pinList" role="tablist" aria-label="Journey stops">
-            <button class="journey__pin-btn" type="button" data-pin="athlone" role="tab">Athlone, Ireland</button>
-            <button class="journey__pin-btn" type="button" data-pin="jerusalem" role="tab">Jerusalem, Palestine</button>
-            <button class="journey__pin-btn" type="button" data-pin="dublin" role="tab">Dublin, Ireland</button>
-            <button class="journey__pin-btn" type="button" data-pin="cantabria" role="tab">Cantabria, Spain</button>
-          </div>
-        </div>
-        <div class="journey__card" id="journeyCard" aria-live="polite">
-          <p class="journey__card-eyebrow" id="cardEyebrow">Where Cian Is From</p>
-          <h3 class="journey__card-title" id="cardTitle">Athlone, Ireland</h3>
-          <p class="journey__card-copy" id="cardCopy">A small town on the River Shannon, right in the heart of Ireland — the beginning of this story.</p>
         </div>
       </div>
     </div>
@@ -356,7 +305,6 @@
 </footer>
 
 <script src="js/i18n.js"></script>
-<script src="js/globe.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

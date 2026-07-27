@@ -562,11 +562,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 :root[dir="rtl"] .intro__eyebrow { letter-spacing: 0.05em; }
 
 .intro__names {
-  font-family: var(--font-heading);
-  font-weight: 600;
+  font-family: 'Macondo Swash Caps', var(--font-heading);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  font-size: clamp(2.4rem, 8vw, var(--fs-3xl));
+  letter-spacing: 0.01em;
+  font-size: clamp(2.3rem, 7.5vw, 4.4rem);
   color: var(--intro-ink);
   margin-block: var(--space-2xs) 0;
   display: flex;
