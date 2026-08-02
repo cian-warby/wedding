@@ -529,12 +529,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   height: 100vh;
   height: 100dvh;
   width: min(11vw, 148px);
-  object-fit: cover;
+  background-image: url('../assets/images/vine-pattern.svg');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
   pointer-events: none;
   z-index: 8;
 }
-.page-frame--left { left: 0; object-position: left top; }
-.page-frame--right { right: 0; object-position: right top; }
+.page-frame--left { left: 0; }
+.page-frame--right { right: 0; transform: scaleX(-1); }
 @media (max-width: 640px) {
   .page-frame { width: 52px; }
 }
