@@ -518,22 +518,25 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding-block: calc(var(--nav-height) + var(--space-xl)) var(--space-3xl);
   /* Fixed cardstock tone, like real stationery — stays the same regardless of site theme. */
   background: #EFE5DA;
-  overflow: hidden;
 }
 
-.intro__frame {
-  position: absolute;
+/* Botanical vine border — fixed to the viewport so it stays put and stays
+   sharp (bound to one screen height rather than stretched over the whole
+   page) while still reading as a frame around the entire scroll. */
+.page-frame {
+  position: fixed;
   top: 0;
-  height: 100%;
-  width: min(16vw, 180px);
+  height: 100vh;
+  height: 100dvh;
+  width: min(11vw, 148px);
   object-fit: cover;
   pointer-events: none;
-  z-index: 1;
+  z-index: 8;
 }
-.intro__frame--left { left: 0; object-position: left top; }
-.intro__frame--right { right: 0; object-position: right top; }
+.page-frame--left { left: 0; object-position: left top; }
+.page-frame--right { right: 0; object-position: right top; }
 @media (max-width: 640px) {
-  .intro__frame { width: 66px; }
+  .page-frame { width: 52px; }
 }
 
 .intro__content {
@@ -867,17 +870,32 @@ ul { margin: 0; padding: 0; list-style: none; }
 .details__card-actions { margin-top: var(--space-lg); display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
 .countdown-panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: var(--color-sage-pale-alt);
-  border: 1px solid var(--color-border);
+  border: 1.5px solid var(--color-sage);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-2xl) var(--space-lg) var(--space-xl);
   max-width: 820px;
   margin-inline: auto;
+}
+.countdown-panel::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid var(--color-sage);
+  opacity: 0.45;
+  border-radius: calc(var(--radius-lg) - 7px);
+  pointer-events: none;
+}
+.countdown-panel__flourish {
+  width: 100px;
+  height: auto;
+  margin-bottom: var(--space-md);
 }
 .countdown-panel__date {
   font-family: var(--font-heading);
@@ -892,11 +910,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: var(--space-lg);
   width: 100%;
 }
+.countdown-grid > div {
+  border-inline-end: 1px solid var(--color-border);
+}
+.countdown-grid > div:last-child { border-inline-end: none; }
 .countdown-unit__num {
   font-family: var(--font-heading);
+  font-weight: 600;
   font-size: clamp(1.5rem, 4vw, var(--fs-2xl));
   font-variant-numeric: tabular-nums;
-  color: var(--color-ink);
+  color: var(--color-terracotta);
 }
 .countdown-unit__label {
   font-size: var(--fs-2xs);
