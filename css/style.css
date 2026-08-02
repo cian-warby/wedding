@@ -574,20 +574,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 :root[dir="rtl"] .intro__eyebrow { letter-spacing: 0.05em; }
 
 .intro__names {
-  font-family: 'Macondo Swash Caps', var(--font-heading);
+  font-family: var(--font-display);
   font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  font-size: clamp(2.3rem, 7.5vw, 4.4rem);
+  font-size: clamp(3rem, 10vw, 5.6rem);
   color: var(--intro-ink);
   margin-block: var(--space-2xs) 0;
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: 0.15em;
   opacity: 0;
   animation: rise-in var(--dur-slow) var(--ease-out) 0.5s forwards;
 }
-.intro__names .amp { color: var(--intro-olive); font-size: 0.75em; }
+.intro__names .amp { color: var(--intro-olive); }
 
 .intro__divider {
   color: var(--intro-olive);
@@ -595,7 +593,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   opacity: 0;
   animation: rise-in var(--dur-slow) var(--ease-out) 0.7s forwards;
 }
-.intro__divider svg { width: 54px; height: 18px; }
+.intro__divider svg { width: 110px; height: 24px; }
 
 .intro__tagline {
   font-family: var(--font-heading);
