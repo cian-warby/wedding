@@ -539,6 +539,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .page-frame--left { left: 0; }
 .page-frame--right { right: 0; transform: scaleX(-1); }
+
+/* Top corner accent — the actual photographed vine cluster (cropped from the
+   reference), shown once at the top of the page rather than tiled, since a
+   corner ornament like the bird shouldn't repeat down the whole scroll. The
+   right frame's parent is mirrored, so its corner image is mirrored back to
+   stay correctly oriented (it's a real, unflipped crop, not a copy of the left). */
+.page-frame__corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.page-frame--right .page-frame__corner { transform: scaleX(-1); }
+
 @media (max-width: 640px) {
   .page-frame { width: 52px; }
 }
