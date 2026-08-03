@@ -1032,28 +1032,28 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ==========================================================================
-   Things To Do — teaser card
+   Things To Do — nearby places grid
    ========================================================================== */
 
-.teaser-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  min-height: 340px;
-  display: flex;
-  align-items: flex-end;
-  box-shadow: var(--shadow-md);
+.section-head .btn { margin-top: var(--space-md); }
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  max-width: 1040px;
+  margin-inline: auto;
 }
-.teaser-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.teaser-card::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,20,14,0) 30%, rgba(20,20,14,0.78) 100%);
+.explore-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
-.teaser-card__body { position: relative; z-index: 1; padding: var(--space-xl); color: #F7F3E7; }
-.teaser-card__title { font-family: var(--font-heading); font-size: var(--fs-2xl); }
-.teaser-card__copy { margin-top: var(--space-2xs); max-width: 50ch; color: rgba(247,243,231,0.85); }
-.teaser-card__link { margin-top: var(--space-md); }
+@media (max-width: 700px) {
+  .explore-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ==========================================================================
    FAQ (accordion)
