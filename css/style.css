@@ -542,7 +542,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   pointer-events: none;
   z-index: 8;
 }
-.page-frame--left { left: 0; background-image: url('../assets/images/vine-corner-left.png'); }
+/* Left and right crops are different native widths (186px vs 138px) for the
+   same 445px-tall span of source photo, so sizing both to 100% container
+   width scales their real-world content unevenly — the right side reads
+   larger. Widen the left background-size by that same ratio (186/138) so
+   the vine motif renders at matching scale on both sides. */
+.page-frame--left { left: 0; background-image: url('../assets/images/vine-corner-left.png'); background-size: 135% auto; }
 .page-frame--right { right: 0; background-image: url('../assets/images/vine-corner-right.png'); }
 
 @media (max-width: 640px) {
