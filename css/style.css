@@ -123,6 +123,7 @@ html { scroll-behavior: smooth; }
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100dvh;
   background: var(--color-bg);
@@ -520,14 +521,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: #EFE5DA;
 }
 
-/* Botanical vine border — fixed to the viewport so it stays put and stays
-   sharp (bound to one screen height rather than stretched over the whole
-   page) while still reading as a frame around the entire scroll. */
+/* Botanical vine border — scrolls with the page (absolute, not fixed) and
+   tiles the full document height, so the pattern loops continuously as
+   you scroll instead of stopping after one screen. Vector art stays
+   perfectly sharp at any length or zoom level. */
 .page-frame {
-  position: fixed;
+  position: absolute;
   top: 0;
-  height: 100vh;
-  height: 100dvh;
+  bottom: 0;
   width: min(11vw, 148px);
   background-image: url('../assets/images/vine-pattern.svg');
   background-repeat: repeat-y;
