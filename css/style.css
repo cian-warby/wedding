@@ -990,44 +990,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: var(--space-sm) auto var(--space-2xl);
 }
 .schedule-teaser__divider img { width: 100px; height: auto; }
-.schedule-teaser__row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 780px;
-  margin-inline: auto;
-}
-.schedule-teaser__item {
-  flex: 1 1 150px;
-  padding: 0 var(--space-md);
-  border-inline-end: 1px solid var(--color-border);
-}
-.schedule-teaser__item:last-child { border-inline-end: none; }
-.schedule-teaser__icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto var(--space-sm);
-  background: #F6ECE3;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3xs);
-}
-.schedule-teaser__icon img { max-width: 100%; max-height: 100%; }
-.schedule-teaser__label {
-  font-family: var(--font-heading);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: var(--fs-sm);
-  color: var(--color-ink);
-}
-.schedule-teaser__time { font-size: var(--fs-xs); color: var(--color-ink-soft); margin-top: 2px; }
 .schedule-teaser__cta { margin-top: var(--space-2xl); }
-@media (max-width: 640px) {
-  .schedule-teaser__item { flex: 1 1 40%; border-inline-end: none; margin-bottom: var(--space-lg); }
-}
 
 /* Wedding weekend two-day overview */
 .weekend-grid {
