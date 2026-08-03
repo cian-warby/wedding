@@ -521,38 +521,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: #EFE5DA;
 }
 
-/* Botanical vine border — scrolls with the page (absolute, not fixed) and
-   tiles the full document height, so the pattern loops continuously as
-   you scroll instead of stopping after one screen. Vector art stays
-   perfectly sharp at any length or zoom level. */
+/* Botanical vine border — the real photographed vine cluster, tiled via
+   repeat-y so it loops continuously as you scroll. Absolute (not fixed)
+   against the position:relative body, so it spans the full document height
+   rather than stopping after one screen. */
 .page-frame {
   position: absolute;
   top: 0;
   bottom: 0;
   width: min(11vw, 148px);
-  background-image: url('../assets/images/vine-pattern.svg');
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: top center;
   pointer-events: none;
   z-index: 8;
 }
-.page-frame--left { left: 0; }
-.page-frame--right { right: 0; transform: scaleX(-1); }
-
-/* Top corner accent — the actual photographed vine cluster (cropped from the
-   reference), shown once at the top of the page rather than tiled, since a
-   corner ornament like the bird shouldn't repeat down the whole scroll. The
-   right frame's parent is mirrored, so its corner image is mirrored back to
-   stay correctly oriented (it's a real, unflipped crop, not a copy of the left). */
-.page-frame__corner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-}
-.page-frame--right .page-frame__corner { transform: scaleX(-1); }
+.page-frame--left { left: 0; background-image: url('../assets/images/vine-corner-left.png'); }
+.page-frame--right { right: 0; background-image: url('../assets/images/vine-corner-right.png'); }
 
 @media (max-width: 640px) {
   .page-frame { width: 52px; }
