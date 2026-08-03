@@ -961,6 +961,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .schedule--blush { background: var(--color-blush); }
 
+/* Matches the plan graphic's own cardstock tone exactly (sampled from the
+   image), so the section has no visible edge around it — fixed regardless
+   of theme, like other physical-object images on the site. */
+.schedule--plan { background: #F6EBE3; }
+
 .schedule-plan-image {
   display: block;
   max-width: 480px;
