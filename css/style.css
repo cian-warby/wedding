@@ -960,10 +960,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .schedule-teaser__divider {
   display: flex;
   justify-content: center;
-  color: var(--color-terracotta);
   margin: var(--space-sm) auto var(--space-2xl);
 }
-.schedule-teaser__divider svg { width: 64px; height: 16px; }
+.schedule-teaser__divider img { width: 100px; height: auto; }
 .schedule-teaser__row {
   display: flex;
   justify-content: center;
